@@ -59,6 +59,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
+
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
@@ -99,6 +100,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
+  // const hr = document.createElement('hr');
+  // title.innerHTML = 'Reviews';
+  container.appendChild( document.createElement('hr') );
+
+
   if (!reviews) {
     const noReviews = document.createElement('p');
     noReviews.innerHTML = 'No reviews yet!';
@@ -115,6 +121,33 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 /**
  * Create review HTML and add it to the webpage.
  */
+createReviewHTML = (review) => {
+  const li = document.createElement('li');
+  const name = document.createElement('div');
+  name.setAttribute('class', 'name');
+  name.innerHTML = review.name;
+  li.appendChild(name);
+
+  const date = document.createElement('div');
+  date.setAttribute('class', 'date');
+  date.innerHTML = review.date;
+  li.appendChild(date);
+
+  const rating = document.createElement('div');
+  rating.setAttribute('class', 'rating');
+  rating.innerHTML = `Rating: ${review.rating}`;
+  li.appendChild(rating);
+
+  const comments = document.createElement('div');
+  comments.setAttribute('class', 'comments');
+  comments.innerHTML = review.comments;
+  li.appendChild(comments);
+
+  return li;
+}
+
+
+/*
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
@@ -135,6 +168,8 @@ createReviewHTML = (review) => {
 
   return li;
 }
+*/
+
 
 /**
  * Add restaurant name to the breadcrumb navigation menu

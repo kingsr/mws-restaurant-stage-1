@@ -8,7 +8,7 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 8000 // Change this to your server port
+    const port = 8889 // Change this to your server port
     return `http://localhost:${port}/data/restaurants.json`;
   }
 
@@ -30,6 +30,49 @@ class DBHelper {
     };
     xhr.send();
   }
+
+  
+
+/*
+
+var client= new XMLHttprequest();
+
+client.addEventListener('load', function() {
+  console.log(client.response);
+});
+
+client.addEventListener('error', function() {
+  console.log("It failed!");
+});
+
+client.responsType = 'json';
+client.open('GET', '/foo');
+client.send();
+
+
+
+*/
+
+
+/*
+
+fetch('/foo').then(function(response) {
+  return response.json();
+}).then(function(data) {
+  console.log(data);
+}).catch(function() {
+  console.log('It failed');
+})
+
+
+
+*/
+
+
+
+
+
+
 
   /**
    * Fetch a restaurant by its ID.
