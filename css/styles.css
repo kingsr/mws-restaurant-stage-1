@@ -76,7 +76,10 @@ nav h1 {
     background-color: #eee;
     /* font-size: 17px; */
     margin: 0;
+<<<<<<< HEAD
     /* text-align: left; */
+=======
+>>>>>>> 284b28173ac548b0eee8c0c7be0660b47a064226
     /* width: calc(50% - 80px); */
 }
 
@@ -96,7 +99,11 @@ nav h1 {
 #breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
+<<<<<<< HEAD
     /* padding: 1.5em; */
+=======
+    padding: 1.5em;
+>>>>>>> 284b28173ac548b0eee8c0c7be0660b47a064226
 }
 
 /* Add a color on mouse-over */
@@ -218,8 +225,13 @@ nav h1 {
   height: 55%;
   position: fixed;
   /* right: 0; */
+<<<<<<< HEAD
   top: 80px;
   width: 100%;
+=======
+  /* top: 80px; */
+  /* width: 100%; */
+>>>>>>> 284b28173ac548b0eee8c0c7be0660b47a064226
 }
 .inside #map {
   background-color: #ccc;
@@ -425,6 +437,7 @@ nav a, button {
       margin-right: auto;
   }
 }
+<<<<<<< HEAD
 
 
 
@@ -460,3 +473,5 @@ nav.breadcrumb [aria-current="page"] {
   font-weight: 700;
   text-decoration: none;
 }
+=======
+>>>>>>> 284b28173ac548b0eee8c0c7be0660b47a064226
